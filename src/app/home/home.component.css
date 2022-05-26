@@ -1,0 +1,31 @@
+.all{
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	background-color: #202c33;
+	height: 89vh;
+	display: flex;
+	flex-direction: column;
+	border-bottom: solid #00a883 10px;
+}
+.logo{
+	height: 30%;
+}
+.logo img{
+	height: 100%;
+	width: 100%;
+}
+.mess{
+	font-size: 150%;
+	color: #8696a0;
+}
+.nom{
+	color: white;
+	font-size: 250%;
+	margin: 2%;
+}
+.chiffrer{
+	padding-top: 20%;
+	color: #8696a0;
+}

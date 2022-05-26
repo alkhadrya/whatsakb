@@ -1,0 +1,32 @@
+
+<div class="principal">
+  <div class="nav">
+                  <div class="profile"><img src="{{users[id-1].photo}}" ><div class="nom">{{users[id-1].prenom}} {{users[id-1].nom}}</div></div>
+                  <div class="nitems">
+                    <div class="nitem"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <div class="nitem"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                  </div>
+  </div>
+  <div class="content">
+    <div class="discuss">
+      <div  *ngFor="let msg of messages; let i = index" class="messagez">  
+          <div class="box boxe" *ngIf="msg.source==id_user && msg.dest==id">
+              <div class="txt">{{msg.contenu}}</div>
+              <div class="heure">{{msg.date|date:'HH:mm'}}</div>
+          </div>
+          <div class="rbox rboxe" *ngIf="msg.source==id && msg.dest==id_user" >
+                <div class="txt">{{msg.contenu}}</div>
+                <div class="heure">{{msg.date|date:'HH:mm'}}</div>
+          </div>
+      </div>
+    </div>
+
+    <div class="barr">
+      <div class="icon">
+        <div><i class="fa-solid fa-face-grin"></i></div>
+        <div><i class="fa-solid fa-paperclip"></i></div>
+      </div>
+      <input type="" name="" [(ngModel)]="message.contenu" placeholder="Message "><i class="fa-solid fa-paper-plane" (click)="saveMessage()"></i>
+    </div>
+  </div>
+</div>
